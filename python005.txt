@@ -1,0 +1,30 @@
+systemctl get-default
+systemctl set-default multi-user.target
+reboot
+cd : change directory
+mkdir : make directory
+rmdir : remove directory
+cd ~ : 루트 디렉터리로
+cp : copy 복사
+rm : remove 파일 삭제
+find / -name test.txt -print
+vi : 명령행모드, 입력모드, :(실행명령모드)
+     dd(삭졔), yy(복사), p(붙여넣기)
+     i, a(append), o
+     :q(종료), w(저장), q!(저장하지 않고 종료)
+yum 패키지 설치 : rpm을 래퍼
+yum install maria-server
+# 서버 관리하기 위해서 (text 모드로 작업)
+systemctl get-default # 현재모드
+systemctl set-default multi-user.target # 텍스트모드로 변경
+reboot # 재부팅
+shutdown -h now # 시스템 종료
+ps -ef # 현재 메모리에 실행되는 내용확인
+*많이 사용하는 것*
+systemctl 서비스를 제어
+firewall-cmd 방화벽
+systemctl start mariadb
+systemctl stop mariadb
+systemctl restart mariadb 세팅이 변경
+ps -ef | grep httpd 웹서버가 실행중인지 확인
+
