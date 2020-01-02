@@ -11,3 +11,51 @@
 
 - s[-1]: 뒤에서 첫번째
 
+- split을 사용하여 분할
+- ~.join()을 사용하여 조인
+
+<기본사용 함수>
+~.capitalize():  맨첫글자를 대문자로
+~.find()
+~.count()
+~.isalpha() : 문자열인가
+~.isdigit() : 숫자인가
+~.replace('A','B') : A를 B로 변환
+~.startswith('A') : 첫시작이 A인가
+~.endswith('A') : 끝이 A인가
+
+<산술연산>
++,-,*,/, %(나머지), //(몫연산자)
+
+<내장함수>
+괄호: []->list,{}->dict,set,()->tuple. 함수에서 사용
+sum, min, abs(absolute), pow(power):제곱, round
+
+- 파이썬에서 random은 순서가 지정되어있다.
+그래서 random.seed()로 시작점을 지정해주면 어느 컴퓨터에서든지 똑같이 돌아간다.
+
+-  swap : 위치를 변경하는 것
+   리턴값이 2개 이상이라도 가능
+ ex) x,y = y,x 하면 위치가 변환
+
+~.append(): 데이터 추가시 사용
+~.pop(): stack에 맨 마지막으로 들어간 데이터 출력
+
+- 포인터(*) : 묶여있는 데이터가 들어가도 풀어져서 계산
+
+- dictionary
+=> 콜론으로 구분된 키이 데이터 형식으로 입력
+ex)  d = {'one':1,'two':2} # 키이 => 저장될 주소값으로 계산됨 - 검색에서 가장 속도가 빠른 것
+     d.items()
+출력) dict_items([('one', 1), ('two', 2)])
+
+- 포함연산자
+print(A in B) : A가 B안에 포함되는가
+
+- 정렬
+sorted() # reverse = TRUE: 내림차순
+*출력할 때만 정렬된다.
+
+~.append() : 모양이 유지되어 들어감
+~.extend() : 추가 
+
