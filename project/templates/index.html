@@ -1,0 +1,19 @@
+{%  extends "base.html" %}
+{%  block explain_contents %}
+
+<center><h2>소정'S 토익학원 선생님 소개</h2><br><br></center>
+
+<center>
+<div style="border: 1px; float: left; width: 22%;">
+<img src = "{{ url_for('static', filename = 'bororo.jpg')}}" >   <h1><br><br><br> 뽀로로 선생님<br> 남극 영어를 배워보자! <br> 기초토익 </h1>
+</div>
+<div style="border: 1px ; float: left; width: 22%;">
+<img src = "{{ url_for('static', filename = 'maicall1.jpg')}}" class = "grid">   <h1><br> 마이콜 선생님 <br> Hip한 영어를 배워보자! <br> 중급토익 </h1>
+</div>
+
+<div style="border: 1px ; float: left; width: 22%;">
+<img src = "{{ url_for('static', filename = 'icebear.jpg')}}" class = "grid">   <h1><br><br><br><br> 아이스베어 선생님 <br> 원어민 영어를 배워보자! <br>만점 목표반</h1>
+</div>
+</center>
+
+{% endblock explain_contents %}

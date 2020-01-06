@@ -1,0 +1,56 @@
+import json
+import pymysql
+def getConnection() :
+    return pymysql.connect(host = '192.168.1.241', port = 3306, user = 'root',
+    password = 'acorn1234Q!', use_unicode = True, db = "academy", charset = 'utf8', autocommit = True)
+
+def getstudent() :
+    conn = getConnection()
+    cur = conn.cursor()
+    cur.callproc("student_select")
+    if(cur.rowcount) :
+        result = cur.fetchall()
+        print(result)
+    else :
+        result = 0;
+    cur.close()
+    conn.close()
+    return result
+
+def setstudent(stuData):
+    conn = getConnection()
+    cur = conn.cursor()
+    args = (stuData['name'], stuData['age'], stuData['school'], stuData['cl_num'])
+    cur.callproc("student_insert", args)
+    result = cur.rowcount
+    cur.close()
+    conn.close()
+    return json.dumps({'rows': result})
+
+def delstudent(in_name):
+    conn = getConnection()
+    cur = conn.cursor()
+    args = (in_name, 0)
+    cur.callproc("student_delete", args)
+    cur.execute('SELECT @_student_delete_1')
+    cur.fetchone()
+    result = cur.rowcount
+    cur.close()
+    conn.close()
+    return json.dumps({'rows' : result})
+
+def putstudent(stuData):
+    conn = getConnection()
+    cur = conn.cursor()
+    # print("테스트 중 ")
+    # print(stuData) # 서버쪽에서는 name을 받고 클라이언트에서는 id로 관리한다.
+    args = (stuData["id5"], stuData['name'], stuData['age'], stuData['school'], stuData['cl_num'], 0)  
+    cur.callproc("student_update", args)
+    cur.execute('SELECT @_student_update_5')
+    #result = cur.fetchone()
+    cur.fetchone()
+    result = cur.rowcount
+    # print(result)
+    cur.close()
+    conn.close()
+    return json.dumps({'rows': result})
