@@ -1,7 +1,7 @@
 -- --------------------------------------------------------
--- 호스트:                          127.0.0.1
--- 서버 버전:                        10.4.11-MariaDB - mariadb.org binary distribution
--- 서버 OS:                        Win64
+-- 호스트:                          192.168.1.241
+-- 서버 버전:                        5.5.64-MariaDB - MariaDB Server
+-- 서버 OS:                        Linux
 -- HeidiSQL 버전:                  10.2.0.5599
 -- --------------------------------------------------------
 
@@ -142,7 +142,7 @@ CREATE TABLE IF NOT EXISTS `student` (
   PRIMARY KEY (`bunho`),
   KEY `schoolcode` (`schoolcode`),
   CONSTRAINT `FK__school` FOREIGN KEY (`schoolcode`) REFERENCES `school` (`schoolcode`)
-) ENGINE=InnoDB AUTO_INCREMENT=14 DEFAULT CHARSET=utf8;
+) ENGINE=InnoDB AUTO_INCREMENT=12 DEFAULT CHARSET=utf8;
 
 -- 테이블 데이터 jeju.student:~11 rows (대략적) 내보내기
 /*!40000 ALTER TABLE `student` DISABLE KEYS */;
@@ -194,7 +194,7 @@ CREATE TABLE IF NOT EXISTS `student_1` (
   `avg` float DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
--- 테이블 데이터 jeju.student_1:~2 rows (대략적) 내보내기
+-- 테이블 데이터 jeju.student_1:~3 rows (대략적) 내보내기
 /*!40000 ALTER TABLE `student_1` DISABLE KEYS */;
 INSERT INTO `student_1` (`s_name`, `kor`, `eng`, `mat`, `tot`, `avg`) VALUES
 	('대한이', 90, 90, 90, 270, 90),
