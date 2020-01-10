@@ -1,0 +1,51 @@
+192.168.1.239
+192.168.1.152
+
+ls
+cd /
+ls
+cd /etc   etc : 제어판
+ls
+vi resolv.conf
+ - nameserver : 도메인 서버
+
+esc
+:q! : 저장하지 않고 나가기
+
+cd ~ : 다시 돌아가기
+cd ..
+ls
+cd home
+ls
+
+yum install mariadb-server
+
+su : super user
+mysql_secure_installation
+
+빠져나갈때 컨트롤 c
+
+systemctl start mariadb
+mysql_secure_installation
+y
+n
+y
+y
+y
+
+mysql -u root -p
+show databases;
+use mysql
+grant all privileges on *.* to 'root'@'%' identified by 'acorn1234Q!' with grant option;
+%는 원래 아이피자리인데 root가 어디든 접근할 수 있게함 
+flush privileges;
+exit
+
+firewall-cmd --permanent --zone=public --add-port=3306/tcp : 방화벽
+firewall-cmd --reload
+firewall-cmd --list-all
+
+systemctl restart firewalld
+systemctl enable mariadb
+
+heidsql로 접속

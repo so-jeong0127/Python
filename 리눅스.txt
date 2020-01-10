@@ -1,0 +1,43 @@
+메모리크기 2048
+30
+virtual box
+centos
+heidisql
+설정 -> 시스템 ->광디스크 해제 ->네트워크 ->어댑터 2 ->사용하기 ->어댑더에 브리지 ->무작위모드-> 가상머신에 허용
+설치 목적지 ->완료 -> 소프트웨어 선택 , 최소설치 보안툴 시스템툴 개발용툴 과학기술지원 레거시unix 호환성
+acorn1234Q!
+서버 gui -> FTP, 기본 웹, 레거시, 개발용, 과학기술, 보안, 시스템, 그래픽기반
+
+
+리눅스 -> other linux
+디버깅툴, 파일 및 스토리지, ftp, 네트워크 파일 시스템, 기본웹, 레거시, 개발용, 과학기술, 보안. 시스템
+
+ftp, maria, postgre, 호환성, 개발용, 보안, 시스템관리
+systemctl get-default # 현재모드
+systemctl set-default multi-user.target #text모드로 변경
+reboot
+shutdown -h now 
+ps -ef # 현재 메모리 실행되는 내용 확인
+cd : change directory
+mkdir : make directory
+remdir : remove directory
+cd ~ : 루트 디렉터리로
+cp : copy
+rm : remove 파일 삭제
+find / -name test.txt -print
+vi : 명령행모드, 입력모드,  :실행명령
+      dd 삭제, yy 복사, p 붙여놓기
+     i, a, o
+    :q 종료, w 저장, q! 저장하지 않고 종료
+yum 패키지 설치 : rpm을 래퍼
+yum install maria-server
+# 서버 관리하기 위해서 (text모드로 작업)
+
+systemctl 서비스를 제어
+firewall -cmd 방화벽
+systemctl start mariadb
+systemctl stop mariadb
+systemctl restart mariadb 세팅이 변경되었을때
+ps -ef | grep httpd 웹서버가 실행중인지 확인
+192.168.122.1
+startx
