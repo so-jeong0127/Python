@@ -1,0 +1,17 @@
+# 가상환경 만들기
+conda create --name tf_test python=3.7 anaconda
+# tf_test 가 가상환경 이름
+
+# 이미 설치되어 있는 것#####
+activate tf_test
+conda update conda
+conda update pip
+conda install numpy
+conda install pandas
+conda install jupyter
+conda install scipy
+conda install sckit-image
+conda install seaborn
+########################
+conda install tensorflow=1.14.0
+jupyter kernel install
